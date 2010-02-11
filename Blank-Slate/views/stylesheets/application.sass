@@ -1,0 +1,79 @@
+//@import compass/utilities
+// grid css convert
+// This import applies a global reset to any page that imports this stylesheet.
+//@import blueprint/reset.sass
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base.sass
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+// Import the non-default scaffolding module.
+// @import blueprint/modules/scaffolding.sass
+@import partials/thumbo.sass
+@import partials/css3.sass
+
+// Base font
+=base-font
+  color: #0d0d0d
+  font: 13px Arial, Helvetica, sans-serif
+  
+// Links a
+.even a
+  background-color: #B200D1
+  border: 1px solid #999999
+  color: #FFFFFF
+  display: block
+  font-size: 17px
+  font-weight: bold
+  margin-bottom: 10px
+  padding: 0px 
+  text-decoration: none
+  +border-top-left-radius(12px)
+  +border-bottom-right-radius(12px)
+
+.odd a
+  background-color: #42004F
+  border: 1px solid #999999
+  color: #FFFFFF
+  display: block
+  font-size: 17px
+  font-weight: bold
+  margin-bottom: 10px
+  padding: 0px 
+  text-decoration: none
+  +border-top-left-radius(12px)
+  +border-bottom-right-radius(12px)
+  
+img
+  border: 0px
+
+ 
+// Base
+html,
+body
+  height: 100%
+  margin: 0 0 1px 0
+  padding: 0
+body
+  +base-font
+  background: #C4D7ED
+  padding: 20px
+  padding-top: 50px
+  text-align: center
+  
+h1
+  font-size: 40px
+  font-weight: bold
+  border: 1px
+  +border-radius(5px)
+//colours
+#opac
+  .full
+    +opacity(1)
+  .mid
+    +opacity(0.5)
+  .faint
+    +opacity(0.3)
+
+
+    
+

@@ -1,0 +1,17 @@
+development:
+  adapter: mongodb
+  host: localhost
+  database: uzzFM
+ 
+test: &TEST
+  adapter: mongodb
+  host: localhost
+  database: uzzFM_test
+ 
+production:
+  adapter: mongodb
+  host: localhost
+  database: uzzFM
+ 
+cucumber:
+  <<: *TEST

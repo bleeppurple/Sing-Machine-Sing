@@ -1,0 +1,150 @@
+CSS3 propertys
+
+Box controls
+
+// background clip and back ground origin
+
+// determine how an image is layed out inside a box and how it is clipped, ie at the edge of padding or border!
+
+background-clip("padding-box or border-box")
+background-origin("padding-box or border-box")
+
+// Background Size
+// Set the size of background images using px, width and height, or percentages
+//  - percentages are relative to the background-origin (default = padding-box)
+//  - mixin defaults to "100% auto"
+
+background-size= 100% auto%
+
+// Border Radius
+// Round all borders by amount
+// border-radius(!radius = !default_border_radius)
+
+// suitable for
+
+//    border-radius= !radius
+//    -moz-border-radius= !radius
+//    -webkit-border-radius= !radius
+
+border-radius(!radius = !default_border_radius)
+
+note: see _border_radius.sass for setting individual corners
+
+//**
+ Border Shadow
+
+//**
+  Provides cross-browser css box shadows for Webkit, Gecko, and CSS3 standard
+  arguments are color, horizontal offset, vertical offset, and blur
+
+//**
+  These defaults make the arguments optional for this mixin
+  If you like, set different defaults in your project
+  
+color                     ||= #333
+shadow horizontal offet   ||= 1px
+shadow vertical offet     ||= 1px
+blur                      ||= 5px
+
+box-shadow(color, shadow horizontal offet, shadow vertical offet, blur)
+
+//**
+ Box sizing
+ 
+ //**
+  Change the box model for Mozilla, Webkit, IE8 and the future
+  @param !bs
+    [ content-box or border-box ]
+=box-sizing()
+
+//**
+ Cloumns
+ 
+//**
+  CSS3 columns for Mozilla, Webkit and the Future
+  
+=column-count(!n)
+
+=column-gap(!u)
+
+=column-rule(!w, !s = "solid", !c = " ")
+ //combined propeties for column rule
+  +column-rule-width(!w)
+  +column-rule-style(!s)
+  +column-rule-color(!c)
+  
+// Font face 
+read through this what exactly is it...
+
+//Gradients for webkit and moz
+
+//*
+  // This will yeild a radial gradient with an apparent specular highlight
+  +radial-gradient("45 45, 10, 52 50, 30", Cyan, DodgerBlue)
+    
+=radial-gradient(!coords, !color1, !color2, !color_stop = false)
+  +gradient("radial", !coords, !color1, !color2, !color_stop)
+
+//* 
+  // This yields a linear gradient spanning from !start to !end coordinates
+  +linear-gradient("left top", "left bottom", #fff, #ddd)
+
+=linear-gradient(!start, !end, !color1, !color2, !color_stop = false)
+  !coords = !start + ", " + !end
+  +gradient("linear", !coords, !color1, !color2, !color_stop)
+
+//*
+  // This yields a gradient starting at the top with #fff, ending in #aaa
+  +v-gradient(#fff, #aaa)
+  // Same as above but with a #ccc at the halfway point
+  +v-gradient(#fff, #aaa, color_stop(50%, #ccc))
+  // Same as the first example but with #ccc at the 30% from the top, and #bbb at 70% from the top
+  +v-gradient(#fff, #aaa, color_stop(30%, #ccc, 70%, #bbb))
+
+=v-gradient(!color1, !color2, !color_stop = false)
+  +linear-gradient("left top", "left bottom", !color1, !color2, !color_stop)
+
+//* 
+  // This yields a horizontal linear gradient spanning from left to right
+  // It can be used just like v-gradient above
+  h-gradient(#fff, #ddd)
+  
+=h-gradient(!color1, !color2, !color_stop = false)
+  +linear-gradient("left top", "right top", !color1, !color2, !color_stop)
+  
+//  inline_block - moz only supported, abstract further and add later
+
+//**  
+  opacity
+//**
+  Provides cross-browser css opacity.
+  @param !opacity
+    A number between 0 and 1, where 0 is transparent and 1 is opaque.
+    
+****  opacity(between 0 and 1) 
+// Make an element completely transparent.
+=transparent  --opacity equals 0
+  
+
+// Make an element completely opaque.
+=opaque  --opacity equals 1
+
+//**
+  text shadows
+//**
+  Provides css text shadows
+  arguments are color, horizontal offset, vertical offset, and blur
+
+//**
+  These defaults make the arguments optional for this mixin
+  If you like, set different defaults in your project
+  
+color     = #aaa
+h-offset  = 1px
+v-offset  = 1px
+blur      = 1px
+
+=text-shadow(!color = !default_text_shadow_color, !hoff = !default_text_shadow_h_offset, !voff = !default_text_shadow_v_offset, !blur = !default_text_shadow_blur)
+
+/// read up on transforms and transistion
+

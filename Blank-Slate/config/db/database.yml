@@ -1,0 +1,17 @@
+development:
+  adapter: mongodb
+  host: localhost
+  database: YOUR DATABASE HERE
+ 
+test: &TEST
+  adapter: mongodb
+  host: localhost
+  database: YOUR DATABASE HERE
+ 
+production:
+  adapter: mongodb
+  host: localhost
+  database: YOUR DATABASE HERE
+ 
+cucumber:
+  <<: *TEST

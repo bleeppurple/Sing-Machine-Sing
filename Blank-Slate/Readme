@@ -1,0 +1,44 @@
+This is a ready to run install of Sinatra
+It includes everything you need to get started with soundcloud, Github and Heroku
+
+It comes setup with
+
+Testing - Rspec, Rack::Test & BDD with cucumber and webrat
+Templating - Haml, SASS
+Databases - Mongo, SQL, ActiveRecord
+Oauth Support
+Librarys - Basic Auth and Partials
+JSQuery - Out the Box Jquery support
+
+we might of missed a few things so open the start.rb and read comments  
+
+TO RUN 
+------
+
+
+install these gems (there could be more...read errors)
+
+compass
+sinatra
+haml
+json
+oauth
+activesupport
+soundcloud-ruby-api-wrapper
+
+type ruby start.rb
+
+open browser at localhost:4567
+
+ba da bing
+
+note below:
+
+weird errors
+--------------
+
+there's some strange things going on with HAML and ruby/linux at the moment watch out
+
+setting up cucumber
+
+-you have to change cucumber directory in features/support env.eb
